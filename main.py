@@ -82,7 +82,7 @@ class MyStreamListener(tweepy.StreamListener):
 
         """
 
-    def on_status(self, status: tweepy.Status) -> None:
+    def on_status(self, status: tweepy.status) -> None:
         """Called when a new status (i.e. tweet or direct message) is received.
 
                If the status is a mention or direct message that contains the '@TwAI' handle, the function extracts the message
