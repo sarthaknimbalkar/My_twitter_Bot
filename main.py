@@ -96,7 +96,7 @@ class MyStreamListener(tweepy.StreamListener):
                    None
 
                """
-        if status.in_reply_to_screen_name == "TwAI":
+        if status.in_reply_to_screen_name == "TwXAi":
             # Extract text of the message
             message_text = status.text.split(' ')[1:]
 
@@ -124,4 +124,4 @@ if __name__ == '__main__':
     logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
     myStreamListener = MyStreamListener()
     myStream = tweepy.Stream(auth=api.auth, listener=myStreamListener)
-    myStream.filter(track=['@TwAI'])  # Listen for tweets that mention "@TwAI"
+    myStream.filter(track=['@TwXAi'])  # Listen for tweets that mention "@TwAI"
